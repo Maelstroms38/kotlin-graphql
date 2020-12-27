@@ -1,0 +1,28 @@
+type Query {
+    desserts(page: Int, size: Int): Desserts
+}
+
+type Desserts {
+  info: Info
+  results: [Dessert]
+}
+
+type Info {
+  count: Int
+  pages: Int
+  next: Int
+  prev: Int
+}
+
+type Dessert {
+    id: ID!
+    name: String
+    amount: Float
+    reviews: [Review]
+}
+
+type Mutation {
+    newDessert(name: String!, amount: Float!) : Dessert!
+    deleteDessert(id: ID!) : Boolean
+    updateDessert(id:ID!, amount: Float!) : Dessert!
+}
