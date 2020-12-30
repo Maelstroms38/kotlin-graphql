@@ -8,8 +8,8 @@ import java.util.*
 
 @Component
 class DessertMutationResolver (private val dessertRepository: DessertRepository): GraphQLMutationResolver {
-    fun newDessert(name: String, amount: Float): Dessert {
-        val dessert = Dessert(name, amount)
+    fun newDessert(name: String, description: String, imageUrl: String): Dessert {
+        val dessert = Dessert(name, description, imageUrl)
         dessert.id = UUID.randomUUID().toString()
         dessertRepository.save(dessert)
         return dessert
@@ -20,10 +20,12 @@ class DessertMutationResolver (private val dessertRepository: DessertRepository)
         return true
     }
 
-    fun updateDessert(id: String, amount: Float): Dessert {
+    fun updateDessert(id: String, name: String?, description: String?, imageUrl: String?): Dessert {
         val dessert = dessertRepository.findById(id)
         dessert.ifPresent {
-            it.amount = amount
+            it.name = name ?: it.name
+            it.description = description ?: it.description
+            it.imageUrl = imageUrl ?: it.imageUrl
             dessertRepository.save(it)
         }
         return dessert.get()

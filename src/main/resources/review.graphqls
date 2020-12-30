@@ -3,6 +3,7 @@ extend type Query {
 }
 
 type Review {
+    id: ID!
     dessertId: ID!
     rating: Int
     text: String!

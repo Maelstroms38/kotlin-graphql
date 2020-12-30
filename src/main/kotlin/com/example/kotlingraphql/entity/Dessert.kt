@@ -6,7 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document
 @Document(collection = "desserts")
 data class Dessert(
     var name: String,
-    var amount: Float
+    var description: String,
+    var imageUrl: String
 ) {
     @Id
     var id: String = ""

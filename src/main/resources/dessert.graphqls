@@ -1,5 +1,6 @@
 type Query {
     desserts(page: Int, size: Int): Desserts
+    dessert(dessertId: String): Dessert
 }
 
 type Desserts {
@@ -17,12 +18,13 @@ type Info {
 type Dessert {
     id: ID!
     name: String
-    amount: Float
+    description: String
+    imageUrl: String
     reviews: [Review]
 }
 
 type Mutation {
-    newDessert(name: String!, amount: Float!) : Dessert!
+    newDessert(name: String!, description: String!, imageUrl: String!) : Dessert!
+    updateDessert(id:ID!, name: String, description: String, imageUrl: String) : Dessert!
     deleteDessert(id: ID!) : Boolean
-    updateDessert(id:ID!, amount: Float!) : Dessert!
 }
