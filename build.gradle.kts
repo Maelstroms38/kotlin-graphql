@@ -24,6 +24,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation("com.graphql-java-kickstart:graphql-spring-boot-starter:8.1.0")
 	implementation("com.graphql-java-kickstart:playground-spring-boot-starter:8.1.0")
+	implementation("com.graphql-java-kickstart:voyager-spring-boot-starter:8.1.0")
 	implementation("com.graphql-java-kickstart:graphql-java-tools:6.3.0")
 }
 
