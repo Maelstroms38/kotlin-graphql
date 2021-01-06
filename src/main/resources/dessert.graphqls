@@ -1,5 +1,5 @@
 type Query {
-    desserts(page: Int, size: Int): Desserts
+    desserts(page: Int = 0, size: Int = 10): Desserts
     dessert(dessertId: String): Dessert
 }
 
