@@ -1,7 +1,7 @@
 package com.example.kotlingraphql.resolvers
 
 import com.example.kotlingraphql.entity.Review
-import com.coxautodev.graphql.tools.GraphQLQueryResolver
+import graphql.kickstart.tools.GraphQLQueryResolver
 import org.springframework.data.mongodb.core.MongoOperations
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query

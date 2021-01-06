@@ -2,7 +2,7 @@ package com.example.kotlingraphql.resolvers
 
 import com.example.kotlingraphql.entity.Dessert
 import com.example.kotlingraphql.repository.DessertRepository
-import com.coxautodev.graphql.tools.GraphQLMutationResolver
+import graphql.kickstart.tools.GraphQLMutationResolver
 import org.springframework.stereotype.Component
 import java.util.*
 

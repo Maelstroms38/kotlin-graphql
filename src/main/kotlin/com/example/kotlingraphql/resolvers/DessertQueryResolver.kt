@@ -4,12 +4,11 @@ import com.example.kotlingraphql.entity.Desserts
 import com.example.kotlingraphql.entity.PagingInfo
 import com.example.kotlingraphql.entity.Review
 import com.example.kotlingraphql.repository.DessertRepository
-import com.coxautodev.graphql.tools.GraphQLQueryResolver
 import com.example.kotlingraphql.entity.Dessert
+import graphql.kickstart.tools.GraphQLQueryResolver
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Pageable
 import org.springframework.data.mongodb.core.MongoOperations
-import org.springframework.data.mongodb.core.findOne
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.stereotype.Component

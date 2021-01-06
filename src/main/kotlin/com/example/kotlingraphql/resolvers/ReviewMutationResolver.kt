@@ -1,8 +1,9 @@
 package com.example.kotlingraphql.resolvers
 
-import com.coxautodev.graphql.tools.GraphQLMutationResolver
+
 import com.example.kotlingraphql.entity.Review
 import com.example.kotlingraphql.repository.ReviewRepository
+import graphql.kickstart.tools.GraphQLMutationResolver
 import org.springframework.stereotype.Component
 import java.util.UUID
 
